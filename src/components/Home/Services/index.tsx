@@ -1,5 +1,5 @@
 import Container from "@/components/ui/Container";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import { FC, HTMLAttributes, Suspense } from "react";
 import arrow from "@/assets/arrowR.svg";

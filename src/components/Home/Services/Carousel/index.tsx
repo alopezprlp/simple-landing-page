@@ -66,7 +66,7 @@ const Carousel: FC<ICarousel> = ({ data }) => {
         }
         slidesPerView={isMobile ? 1 : 2}
         spaceBetween={35}
-        loop={true}
+        loop
         autoplay={{
           delay: 4000,
         }}

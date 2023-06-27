@@ -50,7 +50,8 @@ export default async function RootLayout({ children, params: { locale } }: Props
             <TailwindIndicator />
             <Header />
             {children}
-            <Footer />
+            {/* Uncomment this section to see the footer */}
+            {/* <Footer /> */}
           </Providers>
         </NextIntlClientProvider>
       </body>
