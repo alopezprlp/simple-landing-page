@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.mySwiper.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  /* position: absolute;
+  bottom: -50px !important;
+  left: 48% !important;
+  transform: translateX(-5%); */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.mySwiper.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  transition: all 0.3s linear;
+  background: #3d93ff;
+  box-shadow: 0px 9px 35px rgba(0, 0, 0, 0.1), 0px 9px 35px rgba(0, 0, 0, 0.1);
+  border: none;
+  border: 1px solid black;
+  width: 19px;
+  height: 19px;
+}
+
+.mySwiper.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet::after {
+  content: "";
+  transition: all 0.3s linear;
+  background: #000000;
+  border-radius: 50%;
+  width: 5px !important;
+  height: 5px !important;
+  position: absolute;
+  bottom: 7px;
+  transform: translateX(6px);
+}

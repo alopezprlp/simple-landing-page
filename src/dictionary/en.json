@@ -1,0 +1,15 @@
+{
+  "LocaleLayout": {
+    "title": "Technical Test"
+  },
+  "Navigation": {
+    "Home": "Home",
+    "Services": "Services",
+    "About": "About",
+    "Tools": "Tools",
+    "Partners": "Partners"
+  },
+  "Services": {
+    "title": "Translate only this wonderful title and the navbar"
+  }
+}

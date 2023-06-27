@@ -1,0 +1,15 @@
+{
+  "LocaleLayout": {
+    "title": "Prueba Tecnica"
+  },
+  "Navigation": {
+    "Home": "Inicio",
+    "Services": "Servicios",
+    "About": "Nosotros",
+    "Tools": "Herramientas",
+    "Partners": "Socios"
+  },
+  "Services": {
+    "title": "Traduce solo este título maravilloso y el navbar"
+  }
+}
