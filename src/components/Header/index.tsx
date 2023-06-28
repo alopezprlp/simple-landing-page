@@ -6,13 +6,16 @@ import { cn } from "@/utils/classes";
 import { Menu, XIcon } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useTranslations } from "next-intl";
-
+import { usePathname } from "next/navigation";
+// import { useLocation } from "react-use";
 interface IHeader extends HTMLAttributes<HTMLDivElement> {}
 const Header: FC<IHeader> = () => {
   const [showHeader, setShowHeader] = useState<boolean>(false);
   const [showMobileHeader, setShowMobileHeader] = useState<boolean>(false);
   const t = useTranslations("Navigation");
-
+  const pathname = usePathname();
+  const isHome = pathname.split("/").length === 2;
+  const isService = pathname.split("/").includes("service");
   useEffect(() => {
     window.addEventListener("scroll", (event) => {
       const doc = event.target as Document;
@@ -35,20 +38,28 @@ const Header: FC<IHeader> = () => {
     <header
       className={cn(
         "fixed mx-auto z-50 bg-white left-[50%] translate-x-[-50%] shadow-lg transition-all delay-150 ease-in-out",
-        !showHeader ? "top-7" : "top-0",
-        !showHeader ? "w-[95%] " : "w-full",
-        !showHeader ? "rounded-lg" : "rounded-none"
+        !showHeader && isHome ? "top-7" : "top-0",
+        !showHeader && isHome ? "w-[95%] " : "w-full",
+        !showHeader && isHome ? "rounded-lg" : "rounded-none"
       )}
     >
       <div className="container mx-auto px-5 lg:px-16 py-5 flex flex-row justify-between items-center">
         <div className="text-white lg:hidden w-full flex justify-start">
-          <span className="tetx-2xl font-extrabold text-black">LOGO</span>
+          <Link href="/" className="tetx-2xl font-extrabold text-black">
+            LOGO
+          </Link>
         </div>
         <nav className="uppercase text-[16px] font-normal leading-[21.68px] translate-y-[4px] hidden lg:block">
-          <Link href="#" className="mr-10 font-bold text-[#2E53A3]">
+          <Link
+            href="/"
+            className={cn("mr-10", isHome && "font-bold text-[#2E53A3]")}
+          >
             {t("Home")}
           </Link>
-          <Link href="#" className="mr-10">
+          <Link
+            href="#"
+            className={cn("mr-10", isService && "font-bold text-[#2E53A3]")}
+          >
             {t("Services")}
           </Link>
           <Link href="#" className="mr-10">

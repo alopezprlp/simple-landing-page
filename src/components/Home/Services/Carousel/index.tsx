@@ -112,7 +112,7 @@ const Carousel: FC<ICarousel> = ({ data }) => {
                 </p>
                 {isActive && (
                   <Link
-                    href="#"
+                    href={`/service/${item.id}`}
                     className={
                       "font-semibold text-[20px] leading-[30px] text-white flex justify-start items-center"
                     }
