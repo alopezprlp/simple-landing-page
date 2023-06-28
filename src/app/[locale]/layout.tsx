@@ -3,7 +3,7 @@ import "../globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "../../utils/classes";
 import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
@@ -50,8 +50,8 @@ export default async function RootLayout({
             <TailwindIndicator />
             <Header />
             {children}
-            {/* Uncomment this section to see the footer */}
-            {/* <Footer /> */}
+            {/* comment this section to hide the footer */}
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>
