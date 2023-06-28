@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
       </div>
       </div>
-      <div className="w-full h-12 text-center text-xs text-[#ACACAD]">{`@2023`}</div>
+      <div className="w-full h-12 text-center text-xs text-[#ACACAD]">{`@${new Date().getFullYear()}`}</div>
     </footer>
   );
 }
